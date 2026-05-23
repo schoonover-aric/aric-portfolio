@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    outputFileTracingIncludes: {
+      '/api/chat': ['./node_modules/@ai-sdk/**/*'],
+    },
+  },
 };
 
 export default nextConfig;
